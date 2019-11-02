@@ -20,3 +20,12 @@ class Heap(object):
     heap, compare = self.heap, self.compare
         child = child_index
         while child > 0:
+    # Start from floor(N / 2)  
+            parent = child // 2
+            # Is there any child node smaller than parent
+            if compare(heap[parent], heap[child]):
+                # If no then return 
+                return
+            # Else swap parent and child as smaller one should always pop up
+            heap[parent], heap[child] = heap[child], heap[parent]
+            child = parent
