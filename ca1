@@ -29,3 +29,7 @@ class Heap(object):
             # Else swap parent and child as smaller one should always pop up
             heap[parent], heap[child] = heap[child], heap[parent]
             child = parent
+            def _heapify(self, parent_index):
+        """
+        Do heepifying starting from the root.
+        """
