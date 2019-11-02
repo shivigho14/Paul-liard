@@ -56,3 +56,8 @@ class Heap(object):
         heap[0] = last_element
         self._heapify(0)
         return item
+   
+   def min(self):
+        if not self.heap:
+            return None
+        return self.heap[0]
