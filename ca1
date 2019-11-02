@@ -93,3 +93,12 @@ class StudentDatabase:
         
     def print_database(self):
         print (self.database)
+        
+    def main():
+
+    #Storing information as pair
+    record = StudentDatabase()
+    record.add(662158453, 'DDF34S5', 'Shivani Ghodke')
+    record.add(262158453, 'DS3TYS5', 'John Doe')
+    record.add(662458453, 'DDF34G5', 'Hello World')
+    record.add(602158453, 'DDF3D4S', 'Sam Cassel')    
