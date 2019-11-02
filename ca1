@@ -90,3 +90,6 @@ class StudentDatabase:
     def retrieve(self):
         print(self.database.min())
         self.database.del_min()
+        
+    def print_database(self):
+        print (self.database)
