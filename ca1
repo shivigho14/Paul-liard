@@ -70,3 +70,10 @@ class Heap(object):
 class StudentDatabase:
     def __init__(self):
         self.database = Heap()   
+
+def validate_input(self, student_number, course_id):
+        if 10000000 < student_number < 99999999:
+            return 1
+        if len(course_id) < 7:
+            return 2
+        return 0
