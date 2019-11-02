@@ -29,7 +29,7 @@ class Heap(object):
             # Else swap parent and child as smaller one should always pop up
             heap[parent], heap[child] = heap[child], heap[parent]
             child = parent
-            def _heapify(self, parent_index):
+     def _heapify(self, parent_index):
         """
         Do heepifying starting from the root.
         """
@@ -46,3 +46,13 @@ class Heap(object):
                 return
             heap[parent], heap[child] = heap[child], heap[parent]
             parent = child
+            
+    def del_min(self):
+        heap = self.heap
+        last_element = heap.pop()
+        if not heap:
+            return last_element
+        item = heap[0]
+        heap[0] = last_element
+        self._heapify(0)
+        return item
