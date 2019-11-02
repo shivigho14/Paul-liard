@@ -5,3 +5,5 @@ class Heap(object):
         compare(p, c): comparator function, returns true if the relation between p and c is parent-child
         in simpler words returns boolean if p lt c (p < c)
     
+     """
+    def __init__(self, heap=None, compare=operator.lt):
