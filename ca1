@@ -7,3 +7,16 @@ class Heap(object):
     
      """
     def __init__(self, heap=None, compare=operator.lt):
+     # Keeping the option to take a normal array
+        self.heap = [] if heap is None else heap
+        self.compare = compare
+    def __repr__(self):
+        return 'Student Records \n{!r}\n'.format(self.heap)
+
+    def _inv_heapify(self, child_index):
+    """
+    Do heapifying starting from floor(N/2) till it reaches the root.
+    """
+    heap, compare = self.heap, self.compare
+        child = child_index
+        while child > 0:
