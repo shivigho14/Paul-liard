@@ -64,4 +64,9 @@ class Heap(object):
    
    def add(self, element):
         self.heap.append(element)
-        self._inv_heapify(len(self.heap) - 1)    
+        self._inv_heapify(len(self.heap) - 1) 
+  
+# Student class to maintain records related functions
+class StudentDatabase:
+    def __init__(self):
+        self.database = Heap()   
