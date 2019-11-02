@@ -80,9 +80,9 @@ class StudentDatabase:
 
    def add(self, student_number, course_id, name):
         check = self.validate_input(student_number, course_id)
-        if check == 3:
+        if check == 2:
             raise Exception('\nCourse ID: <7 Characters>')
-        elif check == 2:
+        elif check == 1:
             raise Exception('\nStudent Number: <8 Digits>')
         else:
             self.database.add((student_number, course_id, name))
