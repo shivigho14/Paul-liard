@@ -86,3 +86,7 @@ class StudentDatabase:
             raise Exception('\nStudent Number: <8 Digits>')
         else:
             self.database.add((student_number, course_id, name))
+            
+    def retrieve(self):
+        print(self.database.min())
+        self.database.del_min()
