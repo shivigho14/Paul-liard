@@ -1,0 +1,7 @@
+class Heap(object):
+    """"
+    Attributes:
+        heap: List representation of the heap
+        compare(p, c): comparator function, returns true if the relation between p and c is parent-child
+        in simpler words returns boolean if p lt c (p < c)
+    
