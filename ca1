@@ -71,9 +71,18 @@ class StudentDatabase:
     def __init__(self):
         self.database = Heap()   
 
-def validate_input(self, student_number, course_id):
+   def validate_input(self, student_number, course_id):
         if 10000000 < student_number < 99999999:
             return 1
         if len(course_id) < 7:
             return 2
         return 0
+
+   def add(self, student_number, course_id, name):
+        check = self.validate_input(student_number, course_id)
+        if check == 3:
+            raise Exception('\nCourse ID: <7 Characters>')
+        elif check == 2:
+            raise Exception('\nStudent Number: <8 Digits>')
+        else:
+            self.database.add((student_number, course_id, name))
